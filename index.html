@@ -292,8 +292,17 @@
           text: "2025년 9월 27일, 춘천시에서 만나요! 가족모임 초대장입니다.",
           url: location.href,
         };
-        if (navigator.share) navigator.share(data).catch(() => {});
-        else navigator.clipboard?.writeText(location.href);
+        if (navigator.share) {
+          navigator.share(data).catch(() => {});
+        } else if (navigator.clipboard) {
+          navigator.clipboard.writeText(location.href).then(() => {
+            const toast = document.getElementById("toast");
+            toast.classList.remove("opacity-0", "translate-y-2");
+            setTimeout(() => {
+              toast.classList.add("opacity-0", "translate-y-2");
+            }, 2000);
+          });
+        }
       }
       document
         .getElementById("btnShareSticky")
