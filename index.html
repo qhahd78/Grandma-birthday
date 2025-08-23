@@ -31,7 +31,17 @@
     <style>
       body {
         font-family: "Pretendard", sans-serif;
-        background: linear-gradient(180deg, #fef9c3 0%, #fffde7 100%);
+        background: #f5f5f5;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
       }
 
       /* 풍선 애니메이션 */
@@ -80,15 +90,17 @@
       <!-- HERO -->
       <section class="text-center space-y-3">
         <span
-          class="inline-flex items-center gap-2 text-sm bg-yellow-200 px-4 py-2 rounded-full font-semibold"
+          class="inline-flex items-center gap-2 text-sm bg-violet-200 px-4 py-2 rounded-full font-semibold"
         >
           🎂 75번째 생신 파티 🎂
         </span>
-        <h1 class="text-4xl font-extrabold tracking-tight">초 대 합 니 다</h1>
+        <h1 class="text-4xl font-extrabold tracking-tight">초 대 장</h1>
         <p class="text-[15px] leading-6 max-w-[46ch] mx-auto break-keep">
-          우리의 어머니이자 할머니이신 <b>애국농업인 장옥준</b> 여사의
-          <span class="font-bold text-yellow-600">75세 생신</span>을 축하하는
-          자리에 소중한 가족을 초대합니다.
+          우리의 어머니이자 할머니이신<br />
+          <b>애국농업인 장옥준</b> 여사의
+          <span class="font-bold text-violet-500">75세 생신</span>을 축하하는
+          자리에<br />
+          소중한 가족을 초대합니다.
         </p>
       </section>
 
@@ -97,13 +109,17 @@
         class="mt-6 text-[15px] leading-7 space-y-2 text-center break-keep"
       >
         <p>
-          태어나고 성장해 성인이 되는 모든 순간에 헌신하시고 든든한 힘이
-          되어주신 <b>장여사님</b>께, <br />의지하고 받기만 한 자손들이 모여
+          태어나고 성장해 성인이 되는 모든 순간에
+          <br />
+          헌신하시고 든든한 힘이 되어주신 <b>장여사님</b>께,
+          <br />
+          의지하고 받기만 한 자손들이 모여
+          <br />
           감사를 전하고자 합니다.
         </p>
         <p class="text-gray-600 font-bold">
-          <span class="text-red-500">바쁜 척 하지 말고</span> 모두 모여서 즐겁고
-          소중한 시간을 함께하길 바랍니다.
+          <span class="text-red-500">바쁜 척 하지 말고</span> 모두 모여서<br />
+          즐겁고 소중한 시간을 함께하길 바랍니다.
         </p>
       </section>
 
@@ -111,7 +127,7 @@
       <section class="mt-5">
         <div class="grid gap-3">
           <div
-            class="flex items-center gap-3 rounded-2xl border border-primary/20 bg-white p-4"
+            class="flex items-center gap-3 rounded-2xl border border-primary/20 bg-white px-4 py-2"
           >
             <div aria-hidden="true" class="text-xl">📅</div>
             <div>
@@ -122,7 +138,7 @@
             </div>
           </div>
           <div
-            class="flex items-center gap-3 rounded-2xl border border-primary/20 bg-white p-4"
+            class="flex items-center gap-3 rounded-2xl border border-primary/20 bg-white px-4 py-2"
           >
             <div aria-hidden="true" class="text-xl">⏰</div>
             <div>
@@ -133,7 +149,7 @@
             </div>
           </div>
           <div
-            class="flex items-center gap-3 rounded-2xl border border-primary/20 bg-white p-4"
+            class="flex items-center gap-3 rounded-2xl border border-primary/20 bg-white px-4 py-2"
           >
             <div aria-hidden="true" class="text-xl">📍</div>
             <div>
@@ -153,14 +169,8 @@
             target="_blank"
             rel="noopener"
             class="flex items-center justify-center gap-2 rounded-xl border border-violet-200 bg-violet-50 font-semibold flex-1 px-4 py-3 shadow-sm active:translate-y-[1px]"
-            >🧭 <span>지도 열기</span></a
+            >🧭 <span>네이버 지도 열기</span></a
           >
-          <button
-            id="btnCopy"
-            class="flex items-center justify-center gap-2 rounded-xl border border-violet-200 bg-violet-50 font-semibold flex-1 px-4 py-3 shadow-sm active:translate-y-[1px]"
-          >
-            📋 <span>주소 복사</span>
-          </button>
         </div>
       </section>
 
@@ -190,9 +200,13 @@
 
         <!-- 1부 -->
         <div>
-          <div class="font-bold text-yellow-600 mb-1">
-            1부 (의무 참가) - 장소: 하주골
+          <div class="mb-1">
+            <span class="font-bold text-violet-500">1부 (의무 참가)</span>
+            <br /><span class="text-[14px] font-bold inline-block mb-2"
+              >장소: 하주골</span
+            >
           </div>
+
           <ol class="list-decimal pl-5 space-y-1 text-[15px]">
             <li>국민의례 생략</li>
             <li>애국가 생략</li>
@@ -207,8 +221,11 @@
 
         <!-- 2부 -->
         <div>
-          <div class="font-bold text-yellow-600 mb-1">
-            2부 (자율참가) - 장소: 팬션 고당화각
+          <div class="mb-1">
+            <span class="font-bold text-violet-500">2부 (의무 참가)</span>
+            <br /><span class="text-[14px] font-bold inline-block mb-2"
+              >장소: 팬션 고당화각 (춘천시 서면 명월길 290-13)</span
+            >
           </div>
           <ol class="list-decimal pl-5 space-y-1 text-[15px]">
             <li>축하행사 (김시온과 김시아 외 재롱꾼)</li>
@@ -241,7 +258,9 @@
         </div>
       </section>
 
-      <footer class="text-center text-xs text-gray-600 py-6">
+      <footer
+        class="w-full text-center text-xs text-center text-gray-600 py-6 absolute bottom-0"
+      >
         © 2025 장여사님 75세 생신 | 장여사생신축하추진위원회
       </footer>
     </main>
@@ -250,10 +269,18 @@
     <div class="fixed left-0 right-0 bottom-4 flex justify-center">
       <button
         id="btnShareSticky"
-        class="inline-flex items-center gap-2 rounded-xl px-5 transition-all py-3 font-semibold text-white shadow-lg bg-yellow-400 hover:bg-yellow-500 active:translate-y-[1px]"
+        class="inline-flex items-center gap-2 rounded-xl px-5 transition-all py-3 font-semibold text-white shadow-lg bg-violet-400 active:translate-y-[1px]"
       >
         📤 초대장 공유하기
       </button>
+    </div>
+
+    <!-- 토스트 -->
+    <div
+      id="toast"
+      class="fixed bottom-6 right-6 opacity-0 translate-y-2 bg-gray-800 text-white px-4 py-2 rounded-md text-sm transition-all duration-300 z-50"
+    >
+      주소가 복사되었습니다.
     </div>
 
     <script>
