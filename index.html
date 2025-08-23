@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>초대합니다 | 장여사님 75세 생신</title>
+    <meta
+      name="description"
+      content="우리의 어머니이자 할머니이신 애국농업인 장옥준 여사의 75번째 생신을 가족들과 함께 축하하는 자리로 초대합니다."
+    />
+    <meta property="og:title" content="초대합니다 | 장여사님 75세 생신" />
+    <meta
+      property="og:description"
+      content="2025년 9월 27일 | 장소: 춘천시 | 함께 모여 감사의 마음을 전해요."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://dummyimage.com/1200x630/fef08a/78350f&text=%EC%9E%A5%EC%97%AC%EC%82%AC%EB%8B%98%2075%EC%83%9D%EC%8B%A0"
+    />
+    <meta name="theme-color" content="#fef9c3" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Pretendard", sans-serif;
+        background: linear-gradient(180deg, #fef9c3 0%, #fffde7 100%);
+      }
+
+      /* 풍선 애니메이션 */
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+      .balloon {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      /* 캐러셀 애니메이션 */
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .animate-scroll {
+        display: flex;
+        gap: 1rem;
+        animation: scroll-left 5s linear infinite;
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen text-gray-800 antialiased relative">
+    <!-- 풍선 전체 화면 floating -->
+    <div
+      class="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden"
+    >
+      <div class="absolute top-10 left-5 text-4xl balloon">🎈</div>
+      <div class="absolute top-32 right-10 text-3xl balloon">🎉</div>
+      <div class="absolute top-60 left-20 text-4xl balloon">🎂</div>
+      <div class="absolute top-80 right-20 text-3xl balloon">🎊</div>
+    </div>
+
+    <main class="max-w-[680px] mx-auto px-5 pb-24 pt-10 relative">
+      <!-- HERO -->
+      <section class="text-center space-y-3">
+        <span
+          class="inline-flex items-center gap-2 text-sm bg-yellow-200 px-4 py-2 rounded-full font-semibold"
+        >
+          🎂 75번째 생신 파티 🎂
+        </span>
+        <h1 class="text-4xl font-extrabold tracking-tight">초 대 합 니 다</h1>
+        <p class="text-[15px] leading-6 max-w-[46ch] mx-auto break-keep">
+          우리의 어머니이자 할머니이신 <b>애국농업인 장옥준</b> 여사의
+          <span class="font-bold text-yellow-600">75세 생신</span>을 축하하는
+          자리에 소중한 가족을 초대합니다.
+        </p>
+      </section>
+
+      <!-- 인사말 -->
+      <section
+        class="mt-6 text-[15px] leading-7 space-y-2 text-center break-keep"
+      >
+        <p>
+          태어나고 성장해 성인이 되는 모든 순간에 헌신하시고 든든한 힘이
+          되어주신 <b>장여사님</b>께, <br />의지하고 받기만 한 자손들이 모여
+          감사를 전하고자 합니다.
+        </p>
+        <p class="text-gray-600 font-bold">
+          <span class="text-red-500">바쁜 척 하지 말고</span> 모두 모여서 즐겁고
+          소중한 시간을 함께하길 바랍니다.
+        </p>
+      </section>
+
+      <!-- 행사 정보 -->
+      <section class="mt-5">
+        <div class="grid gap-3">
+          <div
+            class="flex items-center gap-3 rounded-2xl border border-primary/20 bg-white p-4"
+          >
+            <div aria-hidden="true" class="text-xl">📅</div>
+            <div>
+              <div class="text-xs text-zinc-600">날짜</div>
+              <div id="dateText" class="font-semibold text-lg">
+                2025년 9월 27일 (토)
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-3 rounded-2xl border border-primary/20 bg-white p-4"
+          >
+            <div aria-hidden="true" class="text-xl">⏰</div>
+            <div>
+              <div class="text-xs text-zinc-600">시간</div>
+              <div id="timeText" class="font-semibold text-lg">
+                오후 12시 30분
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-3 rounded-2xl border border-primary/20 bg-white p-4"
+          >
+            <div aria-hidden="true" class="text-xl">📍</div>
+            <div>
+              <div class="text-xs text-zinc-600">장소</div>
+              <div id="placeText" class="font-semibold text-lg">
+                강원도 춘천시 동면 만천로 163 한정식 하주골
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 퀵 버튼 -->
+        <div class="flex gap-2 mt-3 justify-between">
+          <a
+            id="btnMap"
+            href="https://map.naver.com/p/search/%EA%B0%95%EC%9B%90%EB%8F%84%20%EC%B6%98%EC%B2%9C%EC%8B%9C%20%ED%95%98%EC%A3%BC%EA%B3%A8/place/12012599?c=15.00,0,0,0,dh&isCorrectAnswer=true&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202508232343&locale=ko&svcName=map_pcv5&searchText=%EA%B0%95%EC%9B%90%EB%8F%84%20%EC%B6%98%EC%B2%9C%EC%8B%9C%20%ED%95%98%EC%A3%BC%EA%B3%A8"
+            target="_blank"
+            rel="noopener"
+            class="flex items-center justify-center gap-2 rounded-xl border border-violet-200 bg-violet-50 font-semibold flex-1 px-4 py-3 shadow-sm active:translate-y-[1px]"
+            >🧭 <span>지도 열기</span></a
+          >
+          <button
+            id="btnCopy"
+            class="flex items-center justify-center gap-2 rounded-xl border border-violet-200 bg-violet-50 font-semibold flex-1 px-4 py-3 shadow-sm active:translate-y-[1px]"
+          >
+            📋 <span>주소 복사</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- 준비물 (기존 그대로) -->
+      <section class="mt-6">
+        <h2 class="font-bold mb-2 text-xl">👜 준비물</h2>
+        <ol class="list-decimal pl-5 space-y-1 text-[15px]">
+          <li>
+            정성이 담긴 <b>소중한 선물</b>
+            <span class="text-xs text-gray-500"
+              >(무겁기만 하고 소중하지 않으면 곤란함)</span
+            >
+          </li>
+          <li>
+            <b>동영상 메시지</b> (30초 이내) 카카오톡으로 보내기 →
+            <b>주선영</b>에게
+            <span class="text-xs text-gray-500 font-bold text-red-500"
+              >(마감일 9월 10일)</span
+            >
+          </li>
+        </ol>
+      </section>
+
+      <!-- 행사 순서 -->
+      <section class="mt-8 space-y-4">
+        <h2 class="font-bold mb-2 text-xl mb-2">🎤 행사 순서 안내</h2>
+
+        <!-- 1부 -->
+        <div>
+          <div class="font-bold text-yellow-600 mb-1">
+            1부 (의무 참가) - 장소: 하주골
+          </div>
+          <ol class="list-decimal pl-5 space-y-1 text-[15px]">
+            <li>국민의례 생략</li>
+            <li>애국가 생략</li>
+            <li>감사동영상 시청</li>
+            <li>어머님은혜 제창</li>
+            <li>감사패 전달</li>
+            <li>선물증정식</li>
+            <li>점심 식사</li>
+            <li>가족사진 촬영</li>
+          </ol>
+        </div>
+
+        <!-- 2부 -->
+        <div>
+          <div class="font-bold text-yellow-600 mb-1">
+            2부 (자율참가) - 장소: 팬션 고당화각
+          </div>
+          <ol class="list-decimal pl-5 space-y-1 text-[15px]">
+            <li>축하행사 (김시온과 김시아 외 재롱꾼)</li>
+            <li>자유놀이</li>
+            <li>저녁식사 및 술판</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 사진 캐러셀 -->
+      <section class="mt-8 overflow-hidden relative">
+        <h2 class="text-base font-semibold mb-2">📸 갤러리</h2>
+        <div id="carousel" class="flex gap-4 will-change-transform">
+          <img
+            src="https://dummyimage.com/200x120/fef08a/78350f&text=1"
+            class="w-40 flex-shrink-0"
+          />
+          <img
+            src="https://dummyimage.com/200x120/fef08a/78350f&text=2"
+            class="w-40 flex-shrink-0"
+          />
+          <img
+            src="https://dummyimage.com/200x120/fef08a/78350f&text=3"
+            class="w-40 flex-shrink-0"
+          />
+          <img
+            src="https://dummyimage.com/200x120/fef08a/78350f&text=4"
+            class="w-40 flex-shrink-0"
+          />
+        </div>
+      </section>
+
+      <footer class="text-center text-xs text-gray-600 py-6">
+        © 2025 장여사님 75세 생신 | 장여사생신축하추진위원회
+      </footer>
+    </main>
+
+    <!-- 하단 공유 버튼 -->
+    <div class="fixed left-0 right-0 bottom-4 flex justify-center">
+      <button
+        id="btnShareSticky"
+        class="inline-flex items-center gap-2 rounded-xl px-5 transition-all py-3 font-semibold text-white shadow-lg bg-yellow-400 hover:bg-yellow-500 active:translate-y-[1px]"
+      >
+        📤 초대장 공유하기
+      </button>
+    </div>
+
+    <script>
+      function shareInvite() {
+        const data = {
+          title: "초대합니다 | 장여사님 75세 생신",
+          text: "2025년 9월 27일, 춘천시에서 만나요! 가족모임 초대장입니다.",
+          url: location.href,
+        };
+        if (navigator.share) navigator.share(data).catch(() => {});
+        else navigator.clipboard?.writeText(location.href);
+      }
+      document
+        .getElementById("btnShareSticky")
+        .addEventListener("click", shareInvite);
+
+      const carousel = document.getElementById("carousel");
+      const speed = 0.8; // px/frame
+      let offset = 0;
+
+      // 이미지 무한 복제
+      const items = Array.from(carousel.children);
+      items.forEach((item) => {
+        const clone = item.cloneNode(true);
+        carousel.appendChild(clone);
+      });
+
+      function animate() {
+        offset -= speed;
+        if (Math.abs(offset) >= carousel.scrollWidth / 2) {
+          offset = 0; // 무한 루프
+        }
+        carousel.style.transform = `translateX(${offset}px)`;
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    </script>
+  </body>
+</html>
