@@ -17,10 +17,7 @@
       content="2025년 9월 27일 | 장소: 춘천시 | 함께 모여 감사의 마음을 전해요."
     />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://dummyimage.com/1200x630/fef08a/78350f&text=%EC%9E%A5%EC%97%AC%EC%82%AC%EB%8B%98%2075%EC%83%9D%EC%8B%A0"
-    />
+    <meta property="og:image" content="/assets/pic4.jpg" />
     <meta name="theme-color" content="#fef9c3" />
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -82,7 +79,7 @@
   <body class="min-h-screen text-gray-800 antialiased relative">
     <!-- 풍선 전체 화면 floating -->
     <div
-      class="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden"
+      class="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden opacity-[0.2]"
     >
       <div class="absolute top-10 left-5 text-4xl balloon">🎈</div>
       <div class="absolute top-32 right-10 text-3xl balloon">🎉</div>
@@ -247,22 +244,11 @@
       <section class="mt-8 overflow-hidden relative">
         <h2 class="text-base font-semibold mb-2">📸 갤러리</h2>
         <div id="carousel" class="flex gap-4 will-change-transform">
-          <img
-            src="https://dummyimage.com/200x120/fef08a/78350f&text=1"
-            class="w-40 flex-shrink-0"
-          />
-          <img
-            src="https://dummyimage.com/200x120/fef08a/78350f&text=2"
-            class="w-40 flex-shrink-0"
-          />
-          <img
-            src="https://dummyimage.com/200x120/fef08a/78350f&text=3"
-            class="w-40 flex-shrink-0"
-          />
-          <img
-            src="https://dummyimage.com/200x120/fef08a/78350f&text=4"
-            class="w-40 flex-shrink-0"
-          />
+          <img src="./assets/pic1.jpg" class="w-[500px] h-[200px] cover" />
+          <img src="./assets/pic2.jpg" class="w-[500px] h-[200px] cover" />
+          <img src="./assets/pic3.jpg" class="w-[500px] h-[200px] cover" />
+          <img src="./assets/pic4.jpg" class="w-[500px] h-[200px] cover" />
+          <img src="./assets/pic5.jpg" class="w-[500px] h-[200px] cover" />
         </div>
       </section>
     </main>
@@ -290,20 +276,13 @@
         const data = {
           title: "초대장 | 장여사님 75세 생신",
           text: "2025년 9월 27일, 춘천시에서 만나요! 가족모임 초대장입니다.",
-          url: location.href,
+          url: "https://qhahd78.github.io/Grandma-birthday/",
         };
         if (navigator.share) {
           navigator.share(data).catch(() => {});
-        } else if (navigator.clipboard) {
-          navigator.clipboard.writeText(location.href).then(() => {
-            const toast = document.getElementById("toast");
-            toast.classList.remove("opacity-0", "translate-y-2");
-            setTimeout(() => {
-              toast.classList.add("opacity-0", "translate-y-2");
-            }, 2000);
-          });
         }
       }
+
       document
         .getElementById("btnShareSticky")
         .addEventListener("click", shareInvite);
