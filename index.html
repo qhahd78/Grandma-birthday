@@ -19,7 +19,7 @@
     <meta property="og:type" content="website" />
     <meta
       property="og:image"
-      content="https://qhahd78.github.io/Grandma-birthday/assets/og-image.png"
+      content="https://qhahd78.github.io/Grandma-birthday/assets/og-image.png?v=202508262155"
     />
     <meta name="theme-color" content="#fef9c3" />
 
@@ -281,8 +281,20 @@
           text: "2025년 9월 27일, 춘천시에서 만나요! 가족모임 초대장입니다.",
           url: "https://qhahd78.github.io/Grandma-birthday/",
         };
+
         if (navigator.share) {
           navigator.share(data).catch(() => {});
+        } else {
+          // fallback: 링크 복사
+          navigator.clipboard.writeText(data.url).then(() => {
+            const toast = document.getElementById("toast");
+            toast.style.opacity = 1;
+            toast.style.transform = "translateY(0)";
+            setTimeout(() => {
+              toast.style.opacity = 0;
+              toast.style.transform = "translateY(8px)";
+            }, 2000);
+          });
         }
       }
 
